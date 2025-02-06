@@ -1,0 +1,97 @@
+// models/question.dart
+class Question {
+  final String text;
+  final List<String> options;
+  final int correctAnswerIndex;
+
+  Question({
+    required this.text,
+    required this.options,
+    required this.correctAnswerIndex,
+  });
+}
+class QuizData {
+  static final Map<String, List<Question>> categoryQuestions = {
+    'Science': [
+      Question(
+        text: "What is the chemical symbol for gold?",
+        options: ['Au', 'Ag', 'Cu', 'Fe'],
+        correctAnswerIndex: 0,
+      ),
+      Question(
+        text: "What planet is known as the Red Planet?",
+        options: ['Venus', 'Mars', 'Jupiter', 'Saturn'],
+        correctAnswerIndex: 1,
+      ),
+      Question(
+        text: "What is the largest organ in the human body?",
+        options: ['Heart', 'Brain', 'Liver', 'Skin'],
+        correctAnswerIndex: 3,
+      ),
+      Question(
+        text: "What is the speed of light?",
+        options: ['300,000 km/s', '150,000 km/s', '450,000 km/s', '200,000 km/s'],
+        correctAnswerIndex: 0,
+      ),
+      Question(
+        text: "What is the smallest unit of life?",
+        options: ['Atom', 'Molecule', 'Cell', 'Bacteria'],
+        correctAnswerIndex: 2,
+      ),
+    ],
+    'History': [
+      Question(
+        text: "Who was the first President of the United States?",
+        options: ['Thomas Jefferson', 'George Washington', 'Abraham Lincoln', 'John Adams'],
+        correctAnswerIndex: 1,
+      ),
+      Question(
+        text: "In what year did World War II end?",
+        options: ['1943', '1944', '1945', '1946'],
+        correctAnswerIndex: 2,
+      ),
+      Question(
+        text: "Which ancient wonder was located in Egypt?",
+        options: ['Hanging Gardens', 'Great Wall', 'Great Pyramid', 'Colossus'],
+        correctAnswerIndex: 2,
+      ),
+      Question(
+        text: "Who painted the Mona Lisa?",
+        options: ['Van Gogh', 'Picasso', 'Leonardo da Vinci', 'Michelangelo'],
+        correctAnswerIndex: 2,
+      ),
+      Question(
+        text: "In what year did the Berlin Wall fall?",
+        options: ['1987', '1989', '1991', '1985'],
+        correctAnswerIndex: 1,
+      ),
+    ],
+    'Technology': [
+      Question(
+        text: "What does CPU stand for?",
+        options: ['Central Processing Unit', 'Computer Personal Unit', 'Central Processor Unit', 'Computer Processing Unit'],
+        correctAnswerIndex: 0,
+      ),
+      Question(
+        text: "Who founded Apple?",
+        options: ['Bill Gates', 'Steve Jobs', 'Mark Zuckerberg', 'Elon Musk'],
+        correctAnswerIndex: 1,
+      ),
+      Question(
+        text: "What programming language is Flutter based on?",
+        options: ['Java', 'Kotlin', 'Dart', 'Swift'],
+        correctAnswerIndex: 2,
+      ),
+      Question(
+        text: "What is the most popular version control system?",
+        options: ['SVN', 'Mercurial', 'Git', 'Perforce'],
+        correctAnswerIndex: 2,
+      ),
+      Question(
+        text: "What does AI stand for?",
+        options: ['Advanced Internet', 'Artificial Intelligence', 'Automated Information', 'Algorithmic Integration'],
+        correctAnswerIndex: 1,
+      ),
+    ]
+  };
+}
